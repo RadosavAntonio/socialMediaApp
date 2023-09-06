@@ -1,11 +1,11 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import {globalStyle} from '../../../assets/globalStyles';
+import {globalStyle} from '../../../../assets/globalStyles';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faComment} from '@fortawesome/free-regular-svg-icons';
-import {Row} from '../globalComponents/row';
-import {SCREEN_MARGIN_HORIZONTAL} from '../../../assets/constants';
-import {colors} from '../../../assets/colors';
+import {Row} from '../../globalComponents/row';
+import {SCREEN_MARGIN_HORIZONTAL} from '../../../../assets/constants';
+import {colors} from '../../../../assets/colors';
 
 interface Props {
   title: string;
