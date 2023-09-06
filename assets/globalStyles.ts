@@ -3,7 +3,7 @@ import {colors} from './colors';
 
 export const globalStyle = StyleSheet.create({
   title: {
-    color: colors.indigo,
+    color: colors.oceanEyesBlue,
     fontFamily: 'Inter',
     fontSize: 24,
     lineHeight: 29,
