@@ -1,12 +1,8 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {Home} from './src/components/home/home';
 
 const App = (): JSX.Element => {
-  return (
-    <SafeAreaView>
-      <Text style={{fontFamily: 'Inter-Black'}}>Font Test</Text>
-    </SafeAreaView>
-  );
+  return <Home />;
 };
 
 export default App;
