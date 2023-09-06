@@ -1,8 +1,8 @@
 import React from 'react';
-import {Home} from './src/components/home/home';
+import {MainFeed} from './src/components/mainFeed/mainFeed';
 
 const App = (): JSX.Element => {
-  return <Home />;
+  return <MainFeed />;
 };
 
 export default App;
