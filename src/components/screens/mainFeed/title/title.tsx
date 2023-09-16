@@ -1,11 +1,18 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import {globalStyle} from '../../../../assets/globalStyles';
+import {
+  Alert,
+  Pressable,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import {globalStyle} from '../../../../../assets/globalStyles';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faComment} from '@fortawesome/free-regular-svg-icons';
-import {Row} from '../../globalComponents/row';
-import {SCREEN_MARGIN_HORIZONTAL} from '../../../../assets/constants';
-import {colors} from '../../../../assets/colors';
+import {Row} from '../../../globalComponents/row';
+import {SCREEN_MARGIN_HORIZONTAL} from '../../../../../assets/constants';
+import {colors} from '../../../../../assets/colors';
 
 interface Props {
   title: string;
@@ -16,7 +23,9 @@ export const Title = ({title}: Props): JSX.Element => {
     <SafeAreaView style={styles.container}>
       <Row style={styles.titleContainer}>
         <Text style={globalStyle.title}>{title}</Text>
-        <View style={styles.iconContainer}>
+        <Pressable
+          style={styles.iconContainer}
+          onPress={() => Alert.alert('Messages pressed')}>
           <FontAwesomeIcon
             icon={faComment}
             color={colors.mediumGrey}
@@ -25,7 +34,7 @@ export const Title = ({title}: Props): JSX.Element => {
           <View style={styles.notificationBubble}>
             <Text style={styles.notificationText}>2</Text>
           </View>
-        </View>
+        </Pressable>
       </Row>
     </SafeAreaView>
   );
