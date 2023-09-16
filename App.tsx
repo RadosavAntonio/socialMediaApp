@@ -1,5 +1,5 @@
 import React from 'react';
-import {MainFeed} from './src/components/mainFeed/mainFeed';
+import {MainFeed} from './src/components/screens/mainFeed/mainFeed';
 
 const App = (): JSX.Element => {
   return <MainFeed />;
