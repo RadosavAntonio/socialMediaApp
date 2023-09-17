@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {FriendItem} from './firendItem';
+import {SCREEN_MARGIN_HORIZONTAL} from '../../../../../assets/constants';
 
 export interface FriendListData {
   firstName: string;
@@ -74,36 +75,41 @@ export const FriendsList = (): JSX.Element => {
   };
 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={renderedData}
-        renderItem={item => FriendItem(item)}
-        keyExtractor={item => item.id.toString()}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        onEndReachedThreshold={0.5} // when is scroll 50%
-        onEndReached={() => {
-          if (!isLoading) {
-            setIsLoading(true);
-            setRenderedData(prev => [
-              ...prev,
-              ...pagination({
-                data: DATA,
-                pgNumber: pageNumber + 1,
-                pgSize: pageSize,
-              }),
-            ]);
-            setIsLoading(false);
-          }
-        }}
-      />
-    </View>
+    <FlatList
+      data={renderedData}
+      renderItem={item => FriendItem(item)}
+      keyExtractor={item => item.id.toString()}
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      style={styles.flatList}
+      contentContainerStyle={styles.container}
+      onEndReachedThreshold={0.5} // when is scroll 50%
+      onEndReached={() => {
+        if (!isLoading) {
+          setIsLoading(true);
+          setRenderedData(prev => [
+            ...prev,
+            ...pagination({
+              data: DATA,
+              pgNumber: pageNumber + 1,
+              pgSize: pageSize,
+            }),
+          ]);
+          setIsLoading(false);
+        }
+      }}
+    />
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    paddingLeft: 28,
+  flatList: {
     width: '100%',
+    flexGrow: 1,
+    paddingLeft: SCREEN_MARGIN_HORIZONTAL,
+    marginRight: SCREEN_MARGIN_HORIZONTAL,
+  },
+  container: {
+    paddingRight: SCREEN_MARGIN_HORIZONTAL,
   },
 });
