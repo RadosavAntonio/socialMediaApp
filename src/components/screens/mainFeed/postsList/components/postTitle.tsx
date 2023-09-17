@@ -28,12 +28,7 @@ export const PostTitle = ({item}: Props): JSX.Element => {
         </View>
       </Row>
       <Pressable onPress={() => Alert.alert('Post details pressed')}>
-        <FontAwesomeIcon
-          icon={faEllipsis}
-          color={colors.lightGrey}
-          size={20}
-          style={}
-        />
+        <FontAwesomeIcon icon={faEllipsis} color={colors.lightGrey} size={20} />
       </Pressable>
     </Row>
   )
