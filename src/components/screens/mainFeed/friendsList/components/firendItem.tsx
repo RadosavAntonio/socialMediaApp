@@ -1,10 +1,15 @@
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {colors} from '../../../../../assets/colors';
-import {FriendListData} from './friendsList';
+import React from 'react'
+import {StyleSheet, Text, View} from 'react-native'
+import {colors} from '../../../../../../assets/colors'
+import {FriendListData} from '../friendsList'
+import {
+  FRIENDS_IMAGE_CONTAINER,
+  FRIENDS_LIST_HEIGHT,
+  SPACE,
+} from '../../../../../../assets/constants'
 
 interface Props {
-  item: FriendListData;
+  item: FriendListData
 }
 
 export const FriendItem = ({item}: Props): JSX.Element => {
@@ -16,21 +21,21 @@ export const FriendItem = ({item}: Props): JSX.Element => {
 
       <Text>{item.firstName}</Text>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
-    height: 85,
-    width: 65,
+    height: FRIENDS_LIST_HEIGHT,
+    width: FRIENDS_IMAGE_CONTAINER,
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginRight: 20,
+    marginRight: SPACE[24],
   },
 
   wrapCircle: {
-    height: 65,
-    width: 65,
+    height: FRIENDS_IMAGE_CONTAINER,
+    width: FRIENDS_IMAGE_CONTAINER,
     borderRadius: 100,
     borderWidth: 1,
     borderColor: colors.caraPink,
@@ -40,9 +45,9 @@ const styles = StyleSheet.create({
   },
 
   photoBackground: {
-    height: 55,
-    width: 55,
+    height: FRIENDS_IMAGE_CONTAINER - 10,
+    width: FRIENDS_IMAGE_CONTAINER - 10,
     borderRadius: 100,
     backgroundColor: colors.lightBlue,
   },
-});
+})
