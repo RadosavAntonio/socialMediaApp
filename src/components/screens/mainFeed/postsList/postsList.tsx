@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: SCREEN_MARGIN_HORIZONTAL,
     marginTop: SPACE[24],
-    backgroundColor: 'pink',
   },
 })
 

@@ -7,6 +7,7 @@ import {
   FRIENDS_LIST_HEIGHT,
   SPACE,
 } from '../../../../../../assets/constants'
+import {FriendImage} from './friendImage'
 
 interface Props {
   item: FriendListData
@@ -15,9 +16,7 @@ interface Props {
 export const FriendItem = ({item}: Props): JSX.Element => {
   return (
     <View style={styles.container}>
-      <View style={styles.wrapCircle}>
-        <View style={styles.photoBackground}></View>
-      </View>
+      <FriendImage />
 
       <Text>{item.firstName}</Text>
     </View>
@@ -31,23 +30,5 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginRight: SPACE[24],
-  },
-
-  wrapCircle: {
-    height: FRIENDS_IMAGE_CONTAINER,
-    width: FRIENDS_IMAGE_CONTAINER,
-    borderRadius: 100,
-    borderWidth: 1,
-    borderColor: colors.caraPink,
-    backgroundColor: 'transparent',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  photoBackground: {
-    height: FRIENDS_IMAGE_CONTAINER - 10,
-    width: FRIENDS_IMAGE_CONTAINER - 10,
-    borderRadius: 100,
-    backgroundColor: colors.lightBlue,
   },
 })

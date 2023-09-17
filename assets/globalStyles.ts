@@ -10,4 +10,8 @@ export const globalStyle = StyleSheet.create({
     fontWeight: '600',
     letterSpacing: 0.48,
   },
-});
+
+  width100Percent: {
+    width: '100%',
+  },
+})

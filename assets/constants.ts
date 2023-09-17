@@ -16,9 +16,15 @@ export const SPACE = {
   18: 18,
   12: 12,
   8: 8,
+  4: 4,
 }
 
-export const SCREEN_MARGIN_HORIZONTAL: number = 18
+export const BORDER_ROUND = {
+  circle: 1000,
+  12: 12,
+}
+
+export const SCREEN_MARGIN_HORIZONTAL: number = SPACE[18]
 
 
 // FRIENDS
