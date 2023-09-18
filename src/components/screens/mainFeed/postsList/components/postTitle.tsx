@@ -15,7 +15,6 @@ interface Props {
 }
 
 export const PostTitle = ({item}: Props): JSX.Element => {
-  console.log('item', item)
   return (
     <Row style={styles.container}>
       <Row>
