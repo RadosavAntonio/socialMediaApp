@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
-import {FriendItem} from './firendItem';
-import {SCREEN_MARGIN_HORIZONTAL} from '../../../../../assets/constants';
+import React, {useState} from 'react'
+import {FlatList, StyleSheet, View} from 'react-native'
+import {FriendItem} from './components/firendItem'
+import {SCREEN_MARGIN_HORIZONTAL} from '../../../../../assets/constants'
 
 export interface FriendListData {
-  firstName: string;
-  id: number;
+  firstName: string
+  id: number
 }
 
 const DATA = [
@@ -49,67 +49,68 @@ const DATA = [
     firstName: 'Gigi',
     id: 10,
   },
-];
+]
 
 export const FriendsList = (): JSX.Element => {
-  const pageSize = 4;
-  const [pageNumber, setPageNumber] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
-  const [renderedData, setRenderedData] = useState(DATA.slice(0, pageSize));
+  const pageSize = 4
+  const [pageNumber, setPageNumber] = useState(1)
+  const [isLoading, setIsLoading] = useState(false)
+  const [renderedData, setRenderedData] = useState(DATA.slice(0, pageSize))
 
   const pagination = ({
     data,
     pgNumber,
     pgSize,
   }: {
-    data: FriendListData[];
-    pgNumber: number;
-    pgSize: number;
+    data: FriendListData[]
+    pgNumber: number
+    pgSize: number
   }): any[] => {
-    let startIndex = (pgNumber - 1) * pgSize;
+    const startIndex = (pgNumber - 1) * pgSize
     if (startIndex >= data.length) {
-      return [];
+      return []
     }
-    setPageNumber(pgNumber);
-    return data.slice(startIndex, startIndex + pgSize);
-  };
+    setPageNumber(pgNumber)
+    return data.slice(startIndex, startIndex + pgSize)
+  }
 
   return (
-    <FlatList
-      data={renderedData}
-      renderItem={item => FriendItem(item)}
-      keyExtractor={item => item.id.toString()}
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      style={styles.flatList}
-      contentContainerStyle={styles.container}
-      onEndReachedThreshold={0.5} // when is scroll 50%
-      onEndReached={() => {
-        if (!isLoading) {
-          setIsLoading(true);
-          setRenderedData(prev => [
-            ...prev,
-            ...pagination({
-              data: DATA,
-              pgNumber: pageNumber + 1,
-              pgSize: pageSize,
-            }),
-          ]);
-          setIsLoading(false);
-        }
-      }}
-    />
-  );
-};
+    <View>
+      <FlatList
+        data={renderedData}
+        renderItem={item => {
+          return FriendItem(item)
+        }}
+        keyExtractor={item => item.id.toString()}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.flatList}
+        contentContainerStyle={styles.container}
+        onEndReachedThreshold={0.5} // when is scroll 50%
+        onEndReached={() => {
+          if (!isLoading) {
+            setIsLoading(true)
+            setRenderedData(prev => [
+              ...prev,
+              ...pagination({
+                data: DATA,
+                pgNumber: pageNumber + 1,
+                pgSize: pageSize,
+              }),
+            ])
+            setIsLoading(false)
+          }
+        }}
+      />
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
   flatList: {
-    width: '100%',
-    flexGrow: 1,
     paddingLeft: SCREEN_MARGIN_HORIZONTAL,
-    marginRight: SCREEN_MARGIN_HORIZONTAL,
   },
   container: {
     paddingRight: SCREEN_MARGIN_HORIZONTAL,
   },
-});
+})

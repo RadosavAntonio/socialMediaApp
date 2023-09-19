@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Alert,
   Pressable,
@@ -6,16 +6,19 @@ import {
   StyleSheet,
   Text,
   View,
-} from 'react-native';
-import {globalStyle} from '../../../../../assets/globalStyles';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faComment} from '@fortawesome/free-regular-svg-icons';
-import {Row} from '../../../globalComponents/row';
-import {SCREEN_MARGIN_HORIZONTAL} from '../../../../../assets/constants';
-import {colors} from '../../../../../assets/colors';
+} from 'react-native'
+import {globalStyle} from '../../../../../assets/globalStyles'
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
+import {faComment} from '@fortawesome/free-regular-svg-icons'
+import {Row} from '../../../globalComponents/row'
+import {
+  BORDER_ROUND,
+  SCREEN_MARGIN_HORIZONTAL,
+} from '../../../../../assets/constants'
+import {colors} from '../../../../../assets/colors'
 
 interface Props {
-  title: string;
+  title: string
 }
 
 export const Title = ({title}: Props): JSX.Element => {
@@ -37,8 +40,8 @@ export const Title = ({title}: Props): JSX.Element => {
         </Pressable>
       </Row>
     </SafeAreaView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -54,14 +57,14 @@ const styles = StyleSheet.create({
 
   iconContainer: {
     padding: 12,
-    borderRadius: 100,
-    backgroundColor: colors.lightGrey,
+    borderRadius: BORDER_ROUND.circle,
+    backgroundColor: colors.veryLightGrey,
   },
 
   notificationBubble: {
     height: 15,
     width: 15,
-    borderRadius: 100,
+    borderRadius: BORDER_ROUND.circle,
     backgroundColor: colors.caraPink,
     justifyContent: 'center',
     alignItems: 'center',
@@ -76,4 +79,4 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: colors.vogueWhite,
   },
-});
+})
