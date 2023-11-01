@@ -1,4 +1,4 @@
-const {faL} = require('@fortawesome/free-solid-svg-icons');
+const { faL } = require('@fortawesome/free-solid-svg-icons')
 
 module.exports = {
   arrowParens: 'avoid',
@@ -7,4 +7,4 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   semi: false,
-};
+}

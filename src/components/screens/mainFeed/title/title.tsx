@@ -16,6 +16,7 @@ import {
   SCREEN_MARGIN_HORIZONTAL,
 } from '../../../../../assets/constants'
 import {colors} from '../../../../../assets/colors'
+import {getAdjustedWidth} from '../../../../../assets/globalUtilityFunctionsandConstants'
 
 interface Props {
   title: string
@@ -32,7 +33,7 @@ export const Title = ({title}: Props): JSX.Element => {
           <FontAwesomeIcon
             icon={faComment}
             color={colors.mediumGrey}
-            size={24}
+            size={getAdjustedWidth(24)}
           />
           <View style={styles.notificationBubble}>
             <Text style={styles.notificationText}>2</Text>

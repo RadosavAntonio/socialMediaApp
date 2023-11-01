@@ -1,11 +1,8 @@
 import React from 'react'
 import {StyleSheet, View} from 'react-native'
-import {
-  BORDER_ROUND,
-  SPACE,
-  getAdjustedWidth,
-} from '../../../../../../assets/constants'
+import {BORDER_ROUND, SPACE} from '../../../../../../assets/constants'
 import {colors} from '../../../../../../assets/colors'
+import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsandConstants'
 
 interface Props {
   imageUrl: string

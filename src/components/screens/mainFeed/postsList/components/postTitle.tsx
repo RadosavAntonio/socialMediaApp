@@ -9,6 +9,8 @@ import {
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
 import {faEllipsis} from '@fortawesome/free-solid-svg-icons'
 import {colors} from '../../../../../../assets/colors'
+import {globalStyle} from '../../../../../../assets/globalStyles'
+import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsandConstants'
 
 interface Props {
   item: any
@@ -23,11 +25,15 @@ export const PostTitle = ({item}: Props): JSX.Element => {
           <Text style={styles.textName}>
             {`${item.firstName} ${item.lastName}`}
           </Text>
-          <Text style={styles.textLocation}>{`${item.location}`}</Text>
+          <Text style={globalStyle.details}>{`${item.location}`}</Text>
         </View>
       </Row>
       <Pressable onPress={() => Alert.alert('Post details pressed')}>
-        <FontAwesomeIcon icon={faEllipsis} color={colors.lightGrey} size={24} />
+        <FontAwesomeIcon
+          icon={faEllipsis}
+          color={colors.lightGrey}
+          size={getAdjustedWidth(24)}
+        />
       </Pressable>
     </Row>
   )
@@ -52,12 +58,5 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter',
     fontWeight: '500',
     color: colors.offBlack,
-  },
-
-  textLocation: {
-    fontSize: 12,
-    fontFamily: 'Inter',
-    fontWeight: '400',
-    color: colors.lightGrey,
   },
 })

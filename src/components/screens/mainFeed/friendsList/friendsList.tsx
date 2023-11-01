@@ -55,6 +55,7 @@ export const FriendsList = (): JSX.Element => {
   const pageSize = 4
   const [pageNumber, setPageNumber] = useState(1)
   const [isLoading, setIsLoading] = useState(false)
+
   const [renderedData, setRenderedData] = useState(DATA.slice(0, pageSize))
 
   const pagination = ({
