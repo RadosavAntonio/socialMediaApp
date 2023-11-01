@@ -4,6 +4,7 @@ import {Title} from './title/title'
 import {FriendsList} from './friendsList/friendsList'
 import {PostsList} from './postsList/postsList'
 import {SafeAreaView} from 'react-native-safe-area-context'
+import {colors} from '../../../../assets/colors'
 
 export const MainFeed = (): JSX.Element => {
   return (
@@ -18,5 +19,6 @@ export const MainFeed = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: colors.vogueWhite,
   },
 })

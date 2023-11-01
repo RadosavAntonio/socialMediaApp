@@ -1,7 +1,6 @@
 import React from 'react'
 import {Row} from '../../../../globalComponents/row'
-import {colors} from '../../../../../../assets/colors'
-import {SPACE, getAdjustedWidth} from '../../../../../../assets/constants'
+import {SPACE} from '../../../../../../assets/constants'
 import {StyleSheet} from 'react-native'
 import {
   faBookmark,
@@ -9,6 +8,8 @@ import {
   faHeart,
 } from '@fortawesome/free-regular-svg-icons'
 import {PostInfoLineItem} from './postInfoLine_item'
+import {globalStyle} from '../../../../../../assets/globalStyles'
+import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsandConstants'
 
 export const PostInfoLine = () => {
   return (
@@ -28,10 +29,7 @@ const styles = StyleSheet.create({
   },
 
   textLocation: {
-    fontSize: 12,
-    fontFamily: 'Inter',
-    fontWeight: '400',
-    color: colors.lightGrey,
+    ...globalStyle.details,
     marginLeft: SPACE[4],
   },
 })

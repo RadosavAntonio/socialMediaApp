@@ -1,14 +1,22 @@
-import {StyleSheet} from 'react-native';
-import {colors} from './colors';
+import {StyleSheet} from 'react-native'
+import {colors} from './colors'
+import {getAdjustedHeight} from './globalUtilityFunctionsandConstants'
 
 export const globalStyle = StyleSheet.create({
   title: {
     color: colors.oceanEyesBlue,
     fontFamily: 'Inter',
-    fontSize: 24,
+    fontSize: getAdjustedHeight(24),
     lineHeight: 29,
     fontWeight: '600',
     letterSpacing: 0.48,
+  },
+
+  details: {
+    fontSize: getAdjustedHeight(12),
+    fontFamily: 'Inter',
+    fontWeight: '400',
+    color: colors.lightGrey,
   },
 
   width100Percent: {

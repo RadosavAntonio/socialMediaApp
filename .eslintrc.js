@@ -5,7 +5,12 @@ module.exports = {
   ignorePatterns: ['package.json'],
   rules: {
     semi: ['error', 'never'],
-    'prettier/prettier': ['error', {semi: false}],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     quotes: [
       'error',
       'single',
@@ -15,7 +20,7 @@ module.exports = {
     ],
     'no-unused-expressions': [
       'error',
-      {allowShortCircuit: true, allowTernary: true},
+      { allowShortCircuit: true, allowTernary: true },
     ],
   },
 }

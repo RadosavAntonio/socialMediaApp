@@ -5,6 +5,8 @@ import {Row} from '../../../../globalComponents/row'
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
 import {SPACE} from '../../../../../../assets/constants'
 import {colors} from '../../../../../../assets/colors'
+import {globalStyle} from '../../../../../../assets/globalStyles'
+import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsandConstants'
 
 interface Props {
   icon: IconDefinition
@@ -20,7 +22,11 @@ export const PostInfoLineItem = ({
   return (
     <Pressable onPress={() => Alert.alert('Pressed, coming soon')}>
       <Row style={styles.container}>
-        <FontAwesomeIcon icon={icon} color={colors.lightGrey} size={20} />
+        <FontAwesomeIcon
+          icon={icon}
+          color={colors.lightGrey}
+          size={getAdjustedWidth(20)}
+        />
         <Text style={styles.textLocation}>{`${iconText}`}</Text>
       </Row>
     </Pressable>
@@ -35,10 +41,7 @@ const styles = StyleSheet.create({
   },
 
   textLocation: {
-    fontSize: 12,
-    fontFamily: 'Inter',
-    fontWeight: '400',
-    color: colors.lightGrey,
+    ...globalStyle.details,
     marginLeft: SPACE[4],
   },
 })
