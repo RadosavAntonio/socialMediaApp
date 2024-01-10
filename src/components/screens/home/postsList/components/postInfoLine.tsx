@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-regular-svg-icons'
 import {PostInfoLineItem} from './postInfoLine_item'
 import {globalStyle} from '../../../../../../assets/globalStyles'
-import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsandConstants'
+import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsAndConstants'
 
 export const PostInfoLine = () => {
   return (

@@ -16,7 +16,7 @@ import {
   SCREEN_MARGIN_HORIZONTAL,
 } from '../../../../../assets/constants'
 import {colors} from '../../../../../assets/colors'
-import {getAdjustedWidth} from '../../../../../assets/globalUtilityFunctionsandConstants'
+import {getAdjustedWidth} from '../../../../../assets/globalUtilityFunctionsAndConstants'
 
 interface Props {
   title: string

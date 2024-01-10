@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native'
 import {colors} from './colors'
-import {getAdjustedHeight} from './globalUtilityFunctionsandConstants'
+import {getAdjustedHeight} from './globalUtilityFunctionsAndConstants'
 
 export const globalStyle = StyleSheet.create({
   title: {

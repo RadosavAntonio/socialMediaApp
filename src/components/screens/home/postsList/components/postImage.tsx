@@ -2,7 +2,7 @@ import React from 'react'
 import {StyleSheet, View} from 'react-native'
 import {BORDER_ROUND, SPACE} from '../../../../../../assets/constants'
 import {colors} from '../../../../../../assets/colors'
-import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsandConstants'
+import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsAndConstants'
 
 interface Props {
   imageUrl: string

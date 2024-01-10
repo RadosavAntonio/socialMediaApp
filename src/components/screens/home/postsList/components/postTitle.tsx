@@ -10,7 +10,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
 import {faEllipsis} from '@fortawesome/free-solid-svg-icons'
 import {colors} from '../../../../../../assets/colors'
 import {globalStyle} from '../../../../../../assets/globalStyles'
-import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsandConstants'
+import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsAndConstants'
 
 interface Props {
   item: any
