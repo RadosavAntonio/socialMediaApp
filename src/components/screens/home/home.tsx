@@ -6,7 +6,7 @@ import {PostsList} from './postsList/postsList'
 import {SafeAreaView} from 'react-native-safe-area-context'
 import {colors} from '../../../../assets/colors'
 
-export const MainFeed = (): JSX.Element => {
+export const Home = (): JSX.Element => {
   return (
     <SafeAreaView edges={['right', 'bottom', 'left']} style={styles.container}>
       <Title title="Let's Explore" />

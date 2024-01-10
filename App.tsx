@@ -1,11 +1,12 @@
 import React from 'react'
-import {MainFeed} from './src/components/screens/mainFeed/mainFeed'
+import {Home} from './src/components/screens/home/home'
 import {NavigationContainer} from '@react-navigation/native'
+import {MainNavigation} from './src/navigation/MainNavigator'
 
 const App = (): JSX.Element => {
   return (
     <NavigationContainer>
-      <MainFeed />
+      <MainNavigation />
     </NavigationContainer>
   )
 }
