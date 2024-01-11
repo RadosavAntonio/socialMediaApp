@@ -1,5 +1,4 @@
 import React from 'react'
-import {Home} from './src/components/screens/home/home'
 import {NavigationContainer} from '@react-navigation/native'
 import {MainNavigation} from './src/navigation/MainNavigator'
 
