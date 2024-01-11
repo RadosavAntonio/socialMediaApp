@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  Alert,
-  Pressable,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native'
+import {Pressable, SafeAreaView, StyleSheet, Text, View} from 'react-native'
 import {globalStyle} from '../../../../../assets/globalStyles'
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
 import {faComment} from '@fortawesome/free-regular-svg-icons'
@@ -17,19 +10,22 @@ import {
 } from '../../../../../assets/constants'
 import {colors} from '../../../../../assets/colors'
 import {getAdjustedWidth} from '../../../../../assets/globalUtilityFunctionsAndConstants'
+import {useAppNavigation} from '../../../../navigation/hooks/useNavigation'
+import {Screen} from '../../../../navigation/navigation'
 
 interface Props {
   title: string
 }
 
 export const Title = ({title}: Props): JSX.Element => {
+  const navigation = useAppNavigation()
+  const navigateToProfile = () => navigation.navigate(Screen.PROFILE)
+
   return (
     <SafeAreaView style={styles.container}>
       <Row style={styles.titleContainer}>
         <Text style={globalStyle.title}>{title}</Text>
-        <Pressable
-          style={styles.iconContainer}
-          onPress={() => Alert.alert('Messages pressed')}>
+        <Pressable style={styles.iconContainer} onPress={navigateToProfile}>
           <FontAwesomeIcon
             icon={faComment}
             color={colors.mediumGrey}

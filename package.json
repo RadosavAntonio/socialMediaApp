@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "i": "( cd ios && bundle exec pod install --repo-update) && npx react-native-fix-image",
+    "i": "yarn && ( cd ios && bundle exec pod install --repo-update) && yarn fix-images",
+    "cleani": "rm -rf node_modules && rm -rf ./ios/Pods && yarn && ( cd ios && bundle exec pod install ) && yarn fix-images",
     "podsUpdate": "cd ios && rm -rf Pods && rm -rf Podfile.lock && pod install && cd .. && rm -rf build && react-native run-ios",
     "gradleUpdate": "cd android && ./gradlew clean && cd .. && react-native run-android"
   },
