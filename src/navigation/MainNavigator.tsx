@@ -1,10 +1,10 @@
 import React from 'react'
-import {createStackNavigator} from '@react-navigation/stack'
 import {Home} from '../components/screens/home/home'
 import {Profile} from '../components/screens/profile/profile'
 import {AppNavigationParams, Screen} from './navigation'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
 
-const AppStack = createStackNavigator<AppNavigationParams>()
+const AppStack = createNativeStackNavigator<AppNavigationParams>()
 
 export const MainNavigation = (): JSX.Element | null => {
   return (
@@ -12,10 +12,9 @@ export const MainNavigation = (): JSX.Element | null => {
       screenOptions={{
         headerShown: false,
         // header: () => null,
-        // stackAnimation: 'fade',
-        // contentStyle: ,
         // gestureEnabled: false,
         // navigationBarColor: , // for android bar
+        animation: 'fade_from_bottom',
       }}
       initialRouteName={Screen.HOME}>
       <AppStack.Screen name={Screen.HOME} component={Home} />
