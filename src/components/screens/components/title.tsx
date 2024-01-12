@@ -1,33 +1,30 @@
 import React from 'react'
-import {Pressable, SafeAreaView, StyleSheet, Text, View} from 'react-native'
-import {globalStyle} from '../../../../../assets/globalStyles'
+import {Pressable, StyleSheet, Text, View} from 'react-native'
+import {globalStyle} from '../../../../assets/globalStyles'
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
-import {faComment} from '@fortawesome/free-regular-svg-icons'
-import {Row} from '../../../globalComponents/row'
+import {IconDefinition} from '@fortawesome/free-regular-svg-icons'
+import {Row} from '../../globalComponents/row'
 import {
   BORDER_ROUND,
   SCREEN_MARGIN_HORIZONTAL,
-} from '../../../../../assets/constants'
-import {colors} from '../../../../../assets/colors'
-import {getAdjustedWidth} from '../../../../../assets/globalUtilityFunctionsAndConstants'
-import {useAppNavigation} from '../../../../navigation/hooks/useNavigation'
-import {Screen} from '../../../../navigation/navigation'
+} from '../../../../assets/constants'
+import {colors} from '../../../../assets/colors'
+import {getAdjustedWidth} from '../../../../assets/globalUtilityFunctionsAndConstants'
 
 interface Props {
-  title: string
+  title?: string
+  icon: IconDefinition
+  onIconPress: () => void
 }
 
-export const Title = ({title}: Props): JSX.Element => {
-  const navigation = useAppNavigation()
-  const navigateToProfile = () => navigation.navigate(Screen.PROFILE)
-
+export const Title = ({title, icon, onIconPress}: Props): JSX.Element => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <Row style={styles.titleContainer}>
-        <Text style={globalStyle.title}>{title}</Text>
-        <Pressable style={styles.iconContainer} onPress={navigateToProfile}>
+        {title && <Text style={globalStyle.title}>{title}</Text>}
+        <Pressable style={styles.iconContainer} onPress={onIconPress}>
           <FontAwesomeIcon
-            icon={faComment}
+            icon={icon}
             color={colors.mediumGrey}
             size={getAdjustedWidth(24)}
           />
@@ -36,7 +33,7 @@ export const Title = ({title}: Props): JSX.Element => {
           </View>
         </Pressable>
       </Row>
-    </SafeAreaView>
+    </View>
   )
 }
 
@@ -47,7 +44,7 @@ const styles = StyleSheet.create({
 
   titleContainer: {
     width: '100%',
-    paddingVertical: 10,
+    paddingBottom: 10,
     justifyContent: 'space-between',
     alignItems: 'center',
   },
