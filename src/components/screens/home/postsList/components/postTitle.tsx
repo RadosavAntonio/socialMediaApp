@@ -1,22 +1,22 @@
 import React from 'react'
-import {Row} from '../../../../globalComponents/row'
-import {FriendImage} from '../../friendsList/components/friendImage'
-import {Alert, Pressable, StyleSheet, Text, View} from 'react-native'
+import { Row } from '../../../../globalComponents/row'
+import { FriendImage } from '../../../../globalComponents/firend/friendImage'
+import { Alert, Pressable, StyleSheet, Text, View } from 'react-native'
 import {
   FRIENDS_IMAGE_CONTAINER,
   SPACE,
 } from '../../../../../../assets/constants'
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
-import {faEllipsis} from '@fortawesome/free-solid-svg-icons'
-import {colors} from '../../../../../../assets/colors'
-import {globalStyle} from '../../../../../../assets/globalStyles'
-import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsAndConstants'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faEllipsis } from '@fortawesome/free-solid-svg-icons'
+import { colors } from '../../../../../../assets/colors'
+import { globalStyle } from '../../../../../../assets/globalStyles'
+import { getAdjustedWidth } from '../../../../../../assets/globalUtilityFunctionsAndConstants'
 
 interface Props {
   item: any
 }
 
-export const PostTitle = ({item}: Props): JSX.Element => {
+export const PostTitle = ({ item }: Props): JSX.Element => {
   return (
     <Row style={styles.container}>
       <Row>

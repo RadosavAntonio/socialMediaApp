@@ -1,7 +1,10 @@
 import React from 'react'
-import {FlatList, StyleSheet, View} from 'react-native'
-import {SCREEN_MARGIN_HORIZONTAL, SPACE} from '../../../../../assets/constants'
-import {PostFeedItem} from './components/postFeedItem'
+import { FlatList, StyleSheet, View } from 'react-native'
+import {
+  SCREEN_MARGIN_HORIZONTAL,
+  SPACE,
+} from '../../../../../assets/constants'
+import { PostFeedItem } from './components/postFeedItem'
 
 export const PostsList = () => {
   return (

@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
-import {FlatList, StyleSheet, View} from 'react-native'
-import {FriendItem} from './components/firendItem'
-import {SCREEN_MARGIN_HORIZONTAL} from '../../../../../assets/constants'
+import React, { useState } from 'react'
+import { FlatList, StyleSheet, View } from 'react-native'
+import { FriendItem } from '../../../globalComponents/firend/firendItem'
+import { SCREEN_MARGIN_HORIZONTAL } from '../../../../../assets/constants'
 
 export interface FriendListData {
   firstName: string

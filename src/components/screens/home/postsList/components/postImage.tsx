@@ -1,14 +1,15 @@
 import React from 'react'
-import {StyleSheet, View} from 'react-native'
-import {BORDER_ROUND, SPACE} from '../../../../../../assets/constants'
-import {colors} from '../../../../../../assets/colors'
-import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsAndConstants'
+import { StyleSheet, View } from 'react-native'
+import { BORDER_ROUND, SPACE } from '../../../../../../assets/constants'
+import { colors } from '../../../../../../assets/colors'
+import { getAdjustedWidth } from '../../../../../../assets/globalUtilityFunctionsAndConstants'
 
 interface Props {
   imageUrl: string
 }
 
-export const PostImage = ({imageUrl}: Props): JSX.Element => {
+export const PostImage = ({ imageUrl }: Props): JSX.Element => {
+  // imageUrl will be used later on
   return <View style={styles.container} />
 }
 
