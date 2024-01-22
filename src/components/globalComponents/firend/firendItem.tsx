@@ -1,19 +1,18 @@
 import React from 'react'
-import {StyleSheet, Text, View} from 'react-native'
-import {colors} from '../../../../../../assets/colors'
-import {FriendListData} from '../friendsList'
+import { StyleSheet, Text, View } from 'react-native'
+import { FriendListData } from '../../screens/home/friendsList/friendsList'
 import {
   FRIENDS_IMAGE_CONTAINER,
   FRIENDS_LIST_HEIGHT,
   SPACE,
-} from '../../../../../../assets/constants'
-import {FriendImage} from './friendImage'
+} from '../../../../assets/constants'
+import { FriendImage } from './friendImage'
 
 interface Props {
   item: FriendListData
 }
 
-export const FriendItem = ({item}: Props): JSX.Element => {
+export const FriendItem = ({ item }: Props): JSX.Element => {
   return (
     <View style={styles.container}>
       <FriendImage />

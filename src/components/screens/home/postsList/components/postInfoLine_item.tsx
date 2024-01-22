@@ -1,12 +1,12 @@
-import {IconDefinition} from '@fortawesome/fontawesome-svg-core'
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import React from 'react'
-import {Alert, Pressable, StyleSheet, Text} from 'react-native'
-import {Row} from '../../../../globalComponents/row'
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
-import {SPACE} from '../../../../../../assets/constants'
-import {colors} from '../../../../../../assets/colors'
-import {globalStyle} from '../../../../../../assets/globalStyles'
-import {getAdjustedWidth} from '../../../../../../assets/globalUtilityFunctionsAndConstants'
+import { Alert, Pressable, StyleSheet, Text } from 'react-native'
+import { Row } from '../../../../globalComponents/row'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { SPACE } from '../../../../../../assets/constants'
+import { colors } from '../../../../../../assets/colors'
+import { globalStyle } from '../../../../../../assets/globalStyles'
+import { getAdjustedWidth } from '../../../../../../assets/globalUtilityFunctionsAndConstants'
 
 interface Props {
   icon: IconDefinition
@@ -20,7 +20,7 @@ export const PostInfoLineItem = ({
   onPress,
 }: Props): JSX.Element => {
   return (
-    <Pressable onPress={() => Alert.alert('Pressed, coming soon')}>
+    <Pressable onPress={onPress}>
       <Row style={styles.container}>
         <FontAwesomeIcon
           icon={icon}

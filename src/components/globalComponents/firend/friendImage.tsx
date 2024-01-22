@@ -1,10 +1,10 @@
 import React from 'react'
-import {StyleSheet, View} from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import {
   BORDER_ROUND,
   FRIENDS_IMAGE_CONTAINER,
-} from '../../../../../../assets/constants'
-import {colors} from '../../../../../../assets/colors'
+} from '../../../../assets/constants'
+import { colors } from '../../../../assets/colors'
 
 export const FriendImage = () => {
   return (

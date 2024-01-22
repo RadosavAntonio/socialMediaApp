@@ -1,11 +1,11 @@
 import React from 'react'
-import {StyleSheet, View} from 'react-native'
-import {SafeAreaView} from 'react-native-safe-area-context'
-import {colors} from '../../../../assets/colors'
-import {Title} from '../components/title'
-import {useAppNavigation} from '../../../navigation/hooks/useNavigation'
-import {faUser} from '@fortawesome/free-regular-svg-icons'
-import {Screen} from '../../../navigation/navigation'
+import { StyleSheet, View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { colors } from '../../../../assets/colors'
+import { Title } from '../components/title'
+import { useAppNavigation } from '../../../navigation/hooks/useNavigation'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
+import { Screen } from '../../../navigation/navigation'
 
 export const Profile = (): JSX.Element => {
   const navigation = useAppNavigation()

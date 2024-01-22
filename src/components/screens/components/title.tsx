@@ -1,15 +1,15 @@
 import React from 'react'
-import {Pressable, StyleSheet, Text, View} from 'react-native'
-import {globalStyle} from '../../../../assets/globalStyles'
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
-import {IconDefinition} from '@fortawesome/free-regular-svg-icons'
-import {Row} from '../../globalComponents/row'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { globalStyle } from '../../../../assets/globalStyles'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { IconDefinition } from '@fortawesome/free-regular-svg-icons'
+import { Row } from '../../globalComponents/row'
 import {
   BORDER_ROUND,
   SCREEN_MARGIN_HORIZONTAL,
 } from '../../../../assets/constants'
-import {colors} from '../../../../assets/colors'
-import {getAdjustedWidth} from '../../../../assets/globalUtilityFunctionsAndConstants'
+import { colors } from '../../../../assets/colors'
+import { getAdjustedWidth } from '../../../../assets/globalUtilityFunctionsAndConstants'
 
 interface Props {
   title?: string
@@ -17,7 +17,7 @@ interface Props {
   onIconPress: () => void
 }
 
-export const Title = ({title, icon, onIconPress}: Props): JSX.Element => {
+export const Title = ({ title, icon, onIconPress }: Props): JSX.Element => {
   return (
     <View style={styles.container}>
       <Row style={styles.titleContainer}>
