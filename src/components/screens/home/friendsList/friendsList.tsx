@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
 import { FriendItem } from '../../../globalComponents/friend/friendItem'
-import { SCREEN_MARGIN_HORIZONTAL } from '../../../../../assets/constants'
+import {
+  SCREEN_MARGIN_HORIZONTAL,
+  SPACE,
+} from '../../../../../assets/constants'
 
 export interface FriendListData {
   firstName: string
@@ -76,7 +79,7 @@ export const FriendsList = (): JSX.Element => {
   }
 
   const renderItem = (item: FriendListData): JSX.Element => (
-    <FriendItem item={item} />
+    <FriendItem item={item} containerStyle={styles.friendItemContainer} />
   )
 
   return (
@@ -113,7 +116,12 @@ const styles = StyleSheet.create({
   flatList: {
     paddingLeft: SCREEN_MARGIN_HORIZONTAL,
   },
+
   container: {
     paddingRight: SCREEN_MARGIN_HORIZONTAL,
+  },
+
+  friendItemContainer: {
+    marginRight: SPACE[24],
   },
 })
