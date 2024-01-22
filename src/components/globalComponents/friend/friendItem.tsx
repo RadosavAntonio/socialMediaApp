@@ -1,7 +1,6 @@
 import React from 'react'
 import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native'
 import { FriendListData } from '../../screens/home/friendsList/friendsList'
-import { SPACE } from '../../../../assets/constants'
 import { FriendImage } from './friendImage'
 import { AppText } from '../appText'
 
@@ -30,6 +29,5 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginRight: SPACE[24],
   },
 })
