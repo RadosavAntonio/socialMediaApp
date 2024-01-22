@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
-import { FriendItem } from '../../../globalComponents/firend/firendItem'
+import { FriendItem } from '../../../globalComponents/friend/friendItem'
 import { SCREEN_MARGIN_HORIZONTAL } from '../../../../../assets/constants'
 
 export interface FriendListData {
@@ -75,13 +75,15 @@ export const FriendsList = (): JSX.Element => {
     return data.slice(startIndex, startIndex + pgSize)
   }
 
+  const renderItem = (item: FriendListData): JSX.Element => (
+    <FriendItem item={item} />
+  )
+
   return (
     <View>
       <FlatList
         data={renderedData}
-        renderItem={item => {
-          return FriendItem(item)
-        }}
+        renderItem={item => renderItem(item.item)}
         keyExtractor={item => item.id.toString()}
         horizontal
         showsHorizontalScrollIndicator={false}

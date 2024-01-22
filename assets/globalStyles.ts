@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native'
-import {colors} from './colors'
-import {getAdjustedHeight} from './globalUtilityFunctionsAndConstants'
+import { StyleSheet } from 'react-native'
+import { colors } from './colors'
+import { getAdjustedHeight } from './globalUtilityFunctionsAndConstants'
 
 export const globalStyle = StyleSheet.create({
   title: {
@@ -21,5 +21,13 @@ export const globalStyle = StyleSheet.create({
 
   width100Percent: {
     width: '100%',
+  },
+
+  flex: {
+    flex: 1,
+  },
+
+  flexGrow: {
+    flexGrow: 1,
   },
 })

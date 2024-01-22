@@ -6,18 +6,27 @@ import {
 } from '../../../../assets/constants'
 import { colors } from '../../../../assets/colors'
 
-export const FriendImage = () => {
+interface Props {
+  imageSize?: number
+}
+
+export const FriendImage = ({
+  imageSize = FRIENDS_IMAGE_CONTAINER,
+}: Props): JSX.Element => {
   return (
-    <View style={styles.wrapCircle}>
-      <View style={styles.photoBackground}></View>
+    <View style={[styles.wrapCircle, { height: imageSize, width: imageSize }]}>
+      <View
+        style={[
+          styles.photoBackground,
+          { height: imageSize - 10, width: imageSize - 10 },
+        ]}
+      />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   wrapCircle: {
-    height: FRIENDS_IMAGE_CONTAINER,
-    width: FRIENDS_IMAGE_CONTAINER,
     borderRadius: BORDER_ROUND.circle,
     borderWidth: 1,
     borderColor: colors.caraPink,
@@ -27,8 +36,6 @@ const styles = StyleSheet.create({
   },
 
   photoBackground: {
-    height: FRIENDS_IMAGE_CONTAINER - 10,
-    width: FRIENDS_IMAGE_CONTAINER - 10,
     borderRadius: 100,
     backgroundColor: colors.lightBlue,
   },

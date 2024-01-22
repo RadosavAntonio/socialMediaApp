@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row } from '../../../../globalComponents/row'
-import { FriendImage } from '../../../../globalComponents/firend/friendImage'
+import { FriendImage } from '../../../../globalComponents/friend/friendImage'
 import { Alert, Pressable, StyleSheet, Text, View } from 'react-native'
 import {
   FRIENDS_IMAGE_CONTAINER,

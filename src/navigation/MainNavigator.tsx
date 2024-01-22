@@ -12,7 +12,7 @@ export const MainNavigation = (): JSX.Element | null => {
       screenOptions={{
         headerShown: false,
         // header: () => null,
-        // gestureEnabled: false,
+        gestureEnabled: false,
         // navigationBarColor: , // for android bar
         animation: 'fade_from_bottom',
       }}
